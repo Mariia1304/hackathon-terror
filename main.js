@@ -55,7 +55,7 @@ window.load;
       			let posterurl = data.Search[0].Poster;
       			printSearch.innerHTML=`<a data-target="#modal${data.Search[0].imdbID}" data-toggle="modal"><div class="card" style="width: 18rem">
 
-						      <img src="${posterurl}" class="card-img" alt="${title}"><div class="overlay"><h2>${title}</h2></div>
+						      <img src="${posterurl}" class="card-img" alt="${title}"><div class="overlay"><h2>${title}(${year})</h2></div>
 						    </div></a>`;
 				fetch(`https://www.omdbapi.com/?i=${data.Search[0].imdbID}&apikey=${keyOMBD}`).then((response)=>{
 					return response.json();
